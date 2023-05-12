@@ -22,6 +22,7 @@
   padding: 0;
   background-color: transparent;
   color: var(--primary-color);
+  box-shadow: unset;
   &:hover {
     background-color: transparent;
     color: var(--primary-alt);
@@ -398,6 +399,9 @@
 
 //portfolio
 
+.portfolio-data {
+  padding-bottom: 0.5rem;
+}
 .portfolio-container {
   overflow: initial;
 }

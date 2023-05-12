@@ -16,9 +16,10 @@
   display: inline-block;
   background-color: var(--primary-color);
   color: #fff;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  padding: 0.2rem 01rem;
+  border-radius: 50px;
   font-weight: $medium;
+  box-shadow: $btn-shadow;
   &:hover {
     background-color: var(--primary-alt);
   }

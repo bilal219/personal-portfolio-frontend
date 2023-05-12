@@ -33,7 +33,7 @@ const Carousel = () => {
               nothin jest checking my text in theis section
             </p>
             <Button
-              btnClass={"btn-small portfolio-btn"}
+              btnClass={" portfolio-btn"}
               btnText={"Demo"}
               iconClass={"uil uil-arrow-right"}
             />
@@ -54,7 +54,7 @@ const Carousel = () => {
               nothin jest checking my text in theis section
             </p>
             <Button
-              btnClass={"btn-small portfolio-btn"}
+              btnClass={" portfolio-btn"}
               btnText={"Demo"}
               iconClass={"uil uil-arrow-right"}
             />
@@ -75,7 +75,7 @@ const Carousel = () => {
               nothin jest checking my text in theis section
             </p>
             <Button
-              btnClass={"btn-small portfolio-btn"}
+              btnClass={" portfolio-btn"}
               btnText={"Demo"}
               iconClass={"uil uil-arrow-right"}
             />

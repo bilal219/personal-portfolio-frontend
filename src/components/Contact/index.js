@@ -44,10 +44,10 @@ const Contact = () => {
               <label className="contact-label">Email</label>
               <input type="email" name="" id="" className="contact-input" />
             </div>
-            <div className="contact-content">
-              <label className="contact-label">Subject</label>
-              <input type="text" name="" id="" className="contact-input" />
-            </div>
+          </div>
+          <div className="contact-content">
+            <label className="contact-label">Subject</label>
+            <input type="text" name="" id="" className="contact-input" />
           </div>
           <div className="contact-content">
             <label className="contact-label">Message</label>
