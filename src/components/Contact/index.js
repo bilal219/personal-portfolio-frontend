@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section className="contact section" id="contact">
       <TitleSection title={"Contact Me"} subtitle={"Get in touch"} />
-      <div className="content-container container grid">
+      <div className="contact-container container grid">
         <div>
           <div className="contact-information">
             <i className="uil uil-phone contact-icon"></i>
@@ -48,18 +48,18 @@ const Contact = () => {
               <label className="contact-label">Subject</label>
               <input type="text" name="" id="" className="contact-input" />
             </div>
-            <div className="contact-content">
-              <label className="contact-label">Subject</label>
-              <textarea
-                name=""
-                id=""
-                rows="7"
-                className="contact-input"
-              ></textarea>
-            </div>
-            <div>
-              <Button btnText={"Send Message"} iconClass={"uil uil-message"} />
-            </div>
+          </div>
+          <div className="contact-content">
+            <label className="contact-label">Message</label>
+            <textarea
+              name=""
+              id=""
+              rows="7"
+              className="contact-input"
+            ></textarea>
+          </div>
+          <div>
+            <Button btnText={"Send Message"} iconClass={"uil uil-message"} />
           </div>
         </form>
       </div>

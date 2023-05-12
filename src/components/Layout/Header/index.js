@@ -20,15 +20,36 @@ const Header = () => {
         <div className={`nav-menu${toggle ? " show-menu" : ""}`} id="nav-menu">
           <ul className="nav-list grid">
             <HeaderLi
-              linkName="home"
+              hrefLink="home"
               iconClass="uil uil-estate"
               linkClass={"active-link"}
+              linkName={"Home"}
             />
-            <HeaderLi linkName="about" iconClass="uil uil-user" />
-            <HeaderLi linkName="skills" iconClass="uil uil-file-alt" />
-            <HeaderLi linkName="services" iconClass="uil uil-briefcase-alt" />
-            <HeaderLi linkName="portfolio" iconClass="uil uil-scenery" />
-            <HeaderLi linkName="contact" iconClass="uil uil-message" />
+            <HeaderLi
+              linkName={"About"}
+              hrefLink="about"
+              iconClass="uil uil-user"
+            />
+            <HeaderLi
+              linkName={"Skills"}
+              hrefLink="skills"
+              iconClass="uil uil-file-alt"
+            />
+            <HeaderLi
+              linkName={"Services"}
+              hrefLink="services"
+              iconClass="uil uil-briefcase-alt"
+            />
+            <HeaderLi
+              linkName={"Portfolio"}
+              hrefLink="portfolio"
+              iconClass="uil uil-scenery"
+            />
+            <HeaderLi
+              linkName={"Contact Me"}
+              hrefLink="contact"
+              iconClass="uil uil-message"
+            />
           </ul>
           <i
             className="uil uil-times nav-close"

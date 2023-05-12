@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+//  colors
 :root {
   --hue-color: 250;
 
@@ -13,6 +14,8 @@
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 }
 
 body.dark-theme {
@@ -22,25 +25,11 @@ body.dark-theme {
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: hsl(var(--hue-color), 28%, 12%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
 
 $header-height: 3rem;
-
-//  colors
-// $hue-color: 250;
-
-// var(--primary-color): hsl($hue-color, 69%, 61%);
-// var(--secondary-color): hsl($hue-color, 69%, 61%);
-// var(--primary-alt): hsl($hue-color, 57%, 53%);
-// var(--primary-light): hsl($hue-color, 92%, 85%);
-// var(--title-color): hsl($hue-color, 8%, 15%);
-// var(--description-color): hsl($hue-color, 8%, 45%);
-// var(--description-light): hsl($hue-color, 8%, 65%);
-// var(--input-color): hsl($hue-color, 70%, 96%);
-// var(--body-color): hsl($hue-color, 60%, 99%);
-// var(--container-color): #fff;
-
-// font and typography
 
 $body-font: "Poppins", sans-serif;
 
@@ -87,5 +76,3 @@ $z-modal: 1000;
 //  shaddows
 
 $menu-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-
-// dark theme
