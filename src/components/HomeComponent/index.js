@@ -13,7 +13,7 @@ const HomeComponent = () => {
             <ImageFrame frameClass="home-blob" imageClass="home-blob-img" />{" "}
           </div>
           <div className="home-data">
-            <h1 className="home-title">Hi, I'am Muhammad Bilal yousaf</h1>
+            <h1 className="home-title">Hi, I am Muhammad Bilal yousaf</h1>
             <h3 className="home-subtitle">Fullstack developer</h3>
             <p className="home-description">
               High level experience in web design and development knowledge,
