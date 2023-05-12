@@ -3,36 +3,35 @@ import Link from "next/link";
 import React from "react";
 
 const Button = ({
-  btnClass,
+  isDownload,
   btnText,
-  btnUrl,
-  btnTarget,
-  onClick,
-  isTargetBtn,
-  isSocialIcon,
-  socialIconClass,
-  clearAncher = true,
+  iconClass,
+  hrefLink,
+  target,
+  btnClass,
+  isSpan,
 }) => {
-  return isSocialIcon ? (
+  if (isSpan) {
+    return (
+      <span className={`btn btn-flex ${btnClass}`}>
+        <>
+          {btnText}
+          {btnText && <i className={`btn-icon ${iconClass}`}></i>}
+        </>
+      </span>
+    );
+  }
+  return (
     <Link
-      href={btnUrl || "#"}
-      target={ancherTarget(btnTarget)}
-      className={clearAncher && "clearAncher"}
+      href={hrefLink || "#"}
+      target={ancherTarget(target)}
+      className={`btn btn-flex ${btnClass}`}
     >
-      <i className={socialIconClass}></i>
+      <>
+        {btnText}
+        {btnText && <i className={`btn-icon ${iconClass}`}></i>}
+      </>
     </Link>
-  ) : isTargetBtn ? (
-    <Link
-      href={btnUrl || "#"}
-      target={ancherTarget(btnTarget)}
-      className={clearAncher && "clearAncher"}
-    >
-      <button className={`${btnClass}`}>{btnText}</button>
-    </Link>
-  ) : (
-    <button className={`${btnClass}`} onClick={onClick}>
-      {btnText}
-    </button>
   );
 };
 

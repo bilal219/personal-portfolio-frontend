@@ -1,0 +1,25 @@
+@mixin section {
+  padding: 2rem 0 4rem;
+}
+@mixin section-title {
+  font-size: $h1-font;
+  text-align: center;
+}
+@mixin section-subtitle {
+  display: block;
+  font-size: $small-font;
+  margin-bottom: $mb-8;
+  text-align: center;
+}
+
+@mixin button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: $medium;
+  &:hover {
+    background-color: var(--primary-alt);
+  }
+}

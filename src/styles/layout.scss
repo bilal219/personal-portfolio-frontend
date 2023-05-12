@@ -1,0 +1,120 @@
+.container {
+  max-width: 768px;
+  margin-left: $mb-5;
+  margin-right: $mb-5;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $z-fixed;
+  background-color: var(--body-color);
+}
+.nav {
+  max-width: 968px;
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  color: var(--title-color);
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+.nav-toggle {
+  color: var(--title-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.nav-list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: $small-font;
+  color: var(--title-color);
+  font-weight: $medium;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}
+
+.nav-close {
+  position: absolute;
+  right: 0.4rem;
+  top: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  &:hover {
+    color: var(--primary-alt);
+  }
+}
+
+.show-menu {
+  bottom: 0 !important;
+}
+
+// scrollup
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--primary-color);
+  opacity: 0.8;
+  padding: 0 0.3rem;
+  border-radius: 50%;
+  z-index: $z-tooltip;
+  transition: ease all 0.4s;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.5);
+  &:hover {
+    background-color: var(--primary-alt);
+  }
+}
+
+.scrollup-icon {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.show-scroll {
+  bottom: 5rem;
+}
+
+//change theme
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: $mb-4;
+  cursor: pointer;
+  &:hover {
+    color: var(--primary-color);
+  }
+}

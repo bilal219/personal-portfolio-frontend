@@ -1,24 +1,25 @@
-import { useQuery } from "@apollo/client";
-import { GET_HOME_PAGE_DATA } from "@/GraphQL/queries/HomePage";
-import { useState } from "react";
-import Carousel from "@/components/Carousel";
-import ComingSoon from "@/components/ComingSoon";
+import Qualification from "@/commons/Qualification";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import HomeComponent from "@/components/HomeComponent";
+import Portfolio from "@/components/Portfolio";
+import Projects from "@/components/Projects";
+import Services from "@/components/Services";
+import Skills from "@/components/Skills";
+import Testimonial from "@/components/Testimonial";
+
 export default function Home() {
-  const [homeData, setHomeData] = useState();
-  const { loading, error, data } = useQuery(GET_HOME_PAGE_DATA, {
-    fetchPolicy: "network-only",
-    onCompleted: (homeData) => {
-      const {
-        home: {
-          data: { attributes },
-        },
-      } = homeData;
-      setHomeData(attributes);
-    },
-  });
   return (
-    <>
-      <ComingSoon />
-    </>
+    <main className="main">
+      <HomeComponent />
+      <About />
+      <Skills />
+      <Qualification />
+      <Services />
+      <Portfolio />
+      <Projects />
+      <Testimonial />
+      <Contact />
+    </main>
   );
 }
