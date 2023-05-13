@@ -2,7 +2,7 @@ import React from "react";
 import { useRecoilState } from "recoil";
 import { handleToggleAtom } from "../../store/Atoms";
 
-const HeaderLi = ({ iconClass, hrefLink, linkName, target, linkClass }) => {
+const HeaderLi = ({ iconClass, hrefLink, linkName, linkClass }) => {
   const [toggle, setToggle] = useRecoilState(handleToggleAtom);
   return (
     <li className="nav-item" onClick={() => setToggle(false)}>
