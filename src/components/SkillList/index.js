@@ -1,7 +1,7 @@
 import SkillInnerList from "@/commons/SkillInnerList";
 import React from "react";
 
-const SkillList = ({ iconsClass, skillName, experience, isToggled }) => {
+const SkillList = ({ iconsClass, skillName, experience, percentageArray }) => {
   return (
     <>
       <div className="skills-header">
@@ -14,10 +14,15 @@ const SkillList = ({ iconsClass, skillName, experience, isToggled }) => {
         <i className="uil uil-angle-down skills-arrow"></i>
       </div>
       <div className="skills-list grid">
-        <SkillInnerList skillName={"Html"} skillPercent={"90%"} />
-        <SkillInnerList skillName={"CSS"} skillPercent={"80%"} />
-        <SkillInnerList skillName={"JavaScript"} skillPercent={"60%"} />
-        <SkillInnerList skillName={"React"} skillPercent={"85%"} />
+        {percentageArray &&
+          percentageArray?.length &&
+          percentageArray?.map((el, i) => (
+            <SkillInnerList
+              skillName={el?.SubSkillTitle}
+              skillPercent={el?.Percentag}
+              key={i}
+            />
+          ))}
       </div>
     </>
   );

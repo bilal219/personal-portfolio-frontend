@@ -1,5 +1,5 @@
 export const ancherTarget = (target) => {
-  return target == "New_Target" ? "_blank" : "_self";
+  return target && target === "New_Tab" ? "_blank" : "_self";
 };
 
 export const dateFormat = (date) => {

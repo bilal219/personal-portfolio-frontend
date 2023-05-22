@@ -22,16 +22,16 @@ const Button = ({
     );
   }
   return (
-    <Link
-      href={hrefLink || "#"}
-      target={ancherTarget(target)}
+    <a
+      href={hrefLink}
+      target={target && ancherTarget(target)}
       className={`btn btn-flex ${btnClass}`}
     >
       <>
         {btnText}
         {btnText && <i className={`btn-icon ${iconClass}`}></i>}
       </>
-    </Link>
+    </a>
   );
 };
 

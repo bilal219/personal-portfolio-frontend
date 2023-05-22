@@ -8,6 +8,7 @@ export const HtmlParser = ({
   isH5,
   isH6,
   isParagraph,
+  isSpan,
 }) => {
   return (
     data &&
@@ -43,6 +44,11 @@ export const HtmlParser = ({
       />
     ) : isParagraph ? (
       <p
+        className={`${parserClass || ""}`}
+        dangerouslySetInnerHTML={{ __html: data }}
+      />
+    ) : isSpan ? (
+      <span
         className={`${parserClass || ""}`}
         dangerouslySetInnerHTML={{ __html: data }}
       />

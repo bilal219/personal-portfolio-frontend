@@ -2,7 +2,7 @@ import TitleSection from "@/commons/TitleSection";
 import React, { useEffect, useState } from "react";
 import SkillList from "../SkillList";
 
-const Skills = () => {
+const Skills = ({ titleSection, skillsArray }) => {
   const [arrayData, setArrayData] = useState([]);
   const [toggle, setToggle] = useState(false);
 
@@ -29,15 +29,20 @@ const Skills = () => {
     },
   ];
   useEffect(() => {
-    const modifiedArray = array?.map((el, i) => {
+    const modifiedArray = skillsArray?.map((el, i) => {
       el.show = false;
       return el;
     });
     setArrayData(modifiedArray);
-  }, []);
+  }, [skillsArray]);
   return (
-    <section className="skills section" id="skills">
-      <TitleSection title="Skills" subtitle="My Technical level" />
+    <section className="skills section" id={titleSection?.Url || "skills"}>
+      {titleSection?.Title && (
+        <TitleSection
+          title={titleSection?.Title}
+          subtitle={titleSection?.Subtitle}
+        />
+      )}
 
       <div className="skills-container container grid">
         {arrayData && arrayData?.length
@@ -51,9 +56,10 @@ const Skills = () => {
                   onClick={() => handleToggle(i)}
                 >
                   <SkillList
-                    iconsClass={el?.iconsClass}
-                    skillName={el?.skillName}
-                    experience={el?.experience}
+                    iconsClass={el?.attributes?.iconsClass}
+                    skillName={el?.attributes?.SkillName}
+                    experience={el?.attributes?.Experience}
+                    percentageArray={el?.attributes?.SkillPercentage}
                   />
                 </div>
               );

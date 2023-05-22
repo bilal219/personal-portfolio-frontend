@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import TitleSection from "../TitleSection";
 import QualificationList from "@/components/QualificationList";
 
-const Qualification = () => {
+const Qualification = ({ titleSection, qualification_array }) => {
   const [mode, setMode] = useState("Education");
-  console.log(mode, "mode");
   const array = [
     {
       title: "Education",
@@ -54,7 +53,10 @@ const Qualification = () => {
   ];
   return (
     <section className="qualification section">
-      <TitleSection title={"Qualification"} subtitle={"My Personal Juorney"} />
+      <TitleSection
+        title={titleSection?.Title}
+        subtitle={titleSection?.Subtitle}
+      />
       <div className="qualification-container container">
         <div className="qualification-tabs">
           <div
@@ -74,25 +76,30 @@ const Qualification = () => {
         </div>
         <div className="qualification-sections">
           {/* education */}
-
-          {array?.length
-            ? array?.map((el, i) => (
+          {qualification_array?.length
+            ? qualification_array?.map((el, i) => (
                 <div
                   className={`qualification-content ${
-                    el?.title === mode ? "qualification-active" : ""
+                    el?.attributes?.QualificationType === mode
+                      ? "qualification-active"
+                      : ""
                   }`}
                   data-content
                   id="education"
                   key={i}
                 >
-                  {el?.subArray?.length &&
-                    el?.subArray?.map((obj, i) => (
+                  {el?.attributes?.QualiaficationDescription?.length &&
+                    el?.attributes?.QualiaficationDescription?.map((obj, i) => (
                       <QualificationList
                         key={i}
-                        title={obj?.title}
-                        subtitle={obj?.suntitle}
-                        date={obj?.data}
-                        islast={el?.subArray?.length - 1 === i}
+                        title={obj?.Title}
+                        subtitle={obj?.Institution}
+                        date={obj?.TimeSlot}
+                        islast={
+                          el?.attributes?.QualiaficationDescription?.length -
+                            1 ===
+                          i
+                        }
                         isEven={(i + 1) % 2 === 0}
                       />
                     ))}

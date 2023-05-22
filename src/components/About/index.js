@@ -1,33 +1,40 @@
 import AboutList from "@/commons/AboutList";
 import Button from "@/commons/Button";
 import TitleSection from "@/commons/TitleSection";
-import React from "react";
+import { ancherTarget } from "@/utils/CommonUtils";
+import React, { useEffect } from "react";
 
-const About = () => {
+const About = ({ titleSection, image, description, skillsArray, btn }) => {
   return (
-    <section className="about section" id="about">
-      <TitleSection title="About Me" subtitle="My Introduction" />
+    <section className="about section" id={titleSection?.Url}>
+      <TitleSection
+        title={titleSection?.Title}
+        subtitle={titleSection?.Subtitle}
+      />
       <div className="about-container container grid">
-        <img src="/assets/images/about.jpg" alt="" className="about-img" />
+        <img
+          src={process?.env?.APP_URL + image?.url}
+          alt={process?.env?.APP_URL + image?.name}
+          className="about-img"
+        />
         <div className="about-data">
-          <p className="about-description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-          </p>
+          <p className="about-description">{description}</p>
           <div className="about-info">
-            <AboutList time="08+" title={"year"} measure={"Experience"} />
-            <AboutList time="20+" title={"Completed"} measure={"Projects"} />
-            <AboutList time="05+" title={"Companies"} measure={"Worked"} />
+            {skillsArray?.length &&
+              skillsArray?.map((el, i) => (
+                <AboutList
+                  time={el?.Duration}
+                  description={el?.Description}
+                  key={i}
+                />
+              ))}
           </div>
           <div className="about-btns">
             <Button
-              isDownload={true}
-              btnText={"Download CV"}
-              iconClass="uil uil-import"
-              hrefLink="#"
-              target=""
+              btnText={btn?.ButtonText}
+              iconClass={btn?.IconClass}
+              hrefLink={process.env.APP_URL + btn?.ButtonUrl}
+              target={btn?.Target}
             />
           </div>
         </div>

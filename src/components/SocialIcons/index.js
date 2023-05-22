@@ -1,18 +1,22 @@
 import { ancherTarget } from "@/utils/CommonUtils";
+import Link from "next/link";
 import React from "react";
 
-const SocialIcons = (data) => {
+const SocialIcons = ({ data }) => {
   return (
     <div className="home-social">
-      <a href="#" className="home-social-icon" target={ancherTarget("")}>
-        <i className="uil uil-linkedin-alt"></i>
-      </a>
-      <a href="#" className="home-social-icon">
-        <i className="uil uil-github-alt"></i>
-      </a>
-      <a href="#" className="home-social-icon">
-        <i className="uil uil-facebook-f"></i>
-      </a>
+      {data && data?.length
+        ? data?.map((el, i) => (
+            <Link
+              href={el?.Url || "#"}
+              className="home-social-icon"
+              target={ancherTarget(el?.Target)}
+              key={i}
+            >
+              <i className={el?.IconsClass}></i>
+            </Link>
+          ))
+        : ""}
     </div>
   );
 };

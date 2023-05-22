@@ -1,6 +1,6 @@
 import React from "react";
 
-const ImageFrame = ({ frameClass, imageClass }) => {
+const ImageFrame = ({ frameClass, imageClass, image }) => {
   return (
     <svg
       className={frameClass}
@@ -27,7 +27,8 @@ const ImageFrame = ({ frameClass, imageClass }) => {
           className={imageClass}
           x="12"
           y="18"
-          xlinkHref="/assets/images/perfil.png"
+          // xlinkHref="/assets/images/perfil.png"
+          xlinkHref={process?.env?.APP_URL + image?.url}
         />
       </g>
     </svg>

@@ -16,8 +16,8 @@ const Carousel = () => {
       // scrollbar={{ draggable: true }}
       draggable={true}
       loop={true}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide>
         {/* 1 */}
