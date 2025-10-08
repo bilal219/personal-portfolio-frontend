@@ -1,4 +1,4 @@
-name: deploy pipline
+name: deploy Pisxxal
 
 on:
   push:
